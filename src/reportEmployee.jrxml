@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null"  pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5627bf4b-414d-4e5e-9eed-619671ec50e3">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     employee.`emp_id` AS employee_emp_id,
+     employee.`name` AS employee_name,
+     employee.`nic` AS employee_nic,
+     employee.`gender` AS employee_gender,
+     employee.`dob` AS employee_dob,
+     employee.`address` AS employee_address,
+     employee.`tele` AS employee_tele,
+     employee.`joing` AS employee_joing,
+     employee.`sallary` AS employee_sallary
+FROM
+     `employee` employee]]>
+	</queryString>
+	<field name="employee_emp_id" class="java.lang.String"/>
+	<field name="employee_name" class="java.lang.String"/>
+	<field name="employee_nic" class="java.lang.String"/>
+	<field name="employee_gender" class="java.lang.String"/>
+	<field name="employee_dob" class="java.lang.String"/>
+	<field name="employee_address" class="java.lang.String"/>
+	<field name="employee_tele" class="java.lang.String"/>
+	<field name="employee_joing" class="java.lang.String"/>
+	<field name="employee_sallary" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="288" y="0" width="231" height="35" uuid="8966e21f-844a-46d8-bafa-f997c77ec1ed"/>
+				<textElement>
+					<font fontName="Arial Black" size="24" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Employee Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="12" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="89" height="20" uuid="4059ff10-a893-4fe1-9000-4e8a10831eee"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="0" width="89" height="20" uuid="40ab17e2-818b-4a90-b13c-a77efef6e92e"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="0" width="89" height="20" uuid="85fbfbe3-f2fd-4080-aa19-186b3e6e0cc3"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="267" y="0" width="89" height="20" uuid="7f1d8e57-bace-4a46-a2a5-8199f96dcfe0"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[NIC No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="0" width="89" height="20" uuid="76b94e04-c6cb-4072-baca-94b788e84367"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DOB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="0" width="89" height="20" uuid="88482fa4-7124-4e12-8f02-282a3d3b4e49"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="534" y="0" width="89" height="20" uuid="0ca23a99-e672-492b-986c-0d9c2fc37fc7"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Tele No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="623" y="0" width="89" height="20" uuid="c9773e52-4c93-4f03-87fb-5c8fa049ef6f"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Join Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="712" y="0" width="89" height="20" uuid="d3cdbd04-99e2-4379-a885-9f089e72d9fe"/>
+				<textElement>
+					<font size="12" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Salary]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="89" height="20" uuid="259f73b3-c91d-491e-a465-4f901d96c03c"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_emp_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="89" y="0" width="89" height="20" uuid="d28136bc-51cd-41f6-9325-5ac19ab565aa"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="178" y="0" width="89" height="20" uuid="2256fc0c-97b9-4f23-ac54-a207e5b2703e"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="267" y="0" width="89" height="20" uuid="1e15c0f6-9b9f-4c7c-a5cd-b457f3a26321"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_nic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="356" y="0" width="89" height="20" uuid="d8fc566c-053f-45a2-88e6-378fa7a0bcf9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="445" y="0" width="89" height="20" uuid="db66a171-2c2e-4598-9aac-8f0e11d2bc94"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="534" y="0" width="89" height="20" uuid="f4234fb6-f77e-4d70-897b-46300e7f2b77"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_tele}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="623" y="0" width="89" height="20" uuid="23b56017-0b6d-4d9c-8d11-cb8033d2cf30"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_joing}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="712" y="0" width="89" height="20" uuid="b3651fd9-8039-4f24-90df-73b32d09f010"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{employee_sallary}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="25" width="801" height="1" uuid="38712380-8fd7-45c4-bba4-7886ade0cabc"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="14" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="58" splitType="Stretch">
+			<staticText>
+				<reportElement x="259" y="5" width="247" height="26" uuid="681a6393-9008-41d8-9844-e0891e9c6231"/>
+				<textElement>
+					<font fontName="Book Antiqua" size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Software by Debug Software Solutin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="31" width="187" height="26" uuid="34d19cbd-32e0-42ea-9485-d78931ea1896"/>
+				<textElement>
+					<font fontName="Book Antiqua" size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Hot Line - 077 990 8148]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="17" splitType="Stretch"/>
+	</summary>
+</jasperReport>

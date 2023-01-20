@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="91271ce3-f620-405e-868f-95e80eaa67c5">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     booking.`cus_id` AS booking_cus_id,
+     booking.`name` AS booking_name,
+     booking.`nic` AS booking_nic,
+     booking.`gender` AS booking_gender,
+     booking.`dob` AS booking_dob,
+     booking.`address` AS booking_address,
+     booking.`tele` AS booking_tele,
+     booking.`come_date` AS booking_come_date,
+     booking.`due_date` AS booking_due_date,
+     booking.`country` AS booking_country,
+     booking.`room_id` AS booking_room_id
+FROM
+     `booking` booking]]>
+	</queryString>
+	<field name="booking_cus_id" class="java.lang.String"/>
+	<field name="booking_name" class="java.lang.String"/>
+	<field name="booking_nic" class="java.lang.String"/>
+	<field name="booking_gender" class="java.lang.String"/>
+	<field name="booking_dob" class="java.lang.String"/>
+	<field name="booking_address" class="java.lang.String"/>
+	<field name="booking_tele" class="java.lang.String"/>
+	<field name="booking_come_date" class="java.lang.String"/>
+	<field name="booking_due_date" class="java.lang.String"/>
+	<field name="booking_country" class="java.lang.String"/>
+	<field name="booking_room_id" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch">
+			<staticText>
+				<reportElement x="293" y="0" width="208" height="35" uuid="edd232fe-5a77-4351-8a34-2c5a60a2cacb"/>
+				<textElement>
+					<font fontName="Arial Black" size="24" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Booking Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="21" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="33" height="20" uuid="2be19138-9338-4656-b65a-2795237e3abc"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="47" y="0" width="82" height="20" uuid="946119cc-0b19-4ce8-94af-88c875f0ed88"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="0" width="72" height="20" uuid="829f6772-1007-431a-af83-470e06ee26dd"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIC No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="0" width="42" height="20" uuid="c56d8274-d0dc-4109-8e1a-a0296f98fdb3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gender]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="316" y="0" width="72" height="20" uuid="99602e36-65c6-472e-93d7-f2c11bdde851"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DOB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="401" y="0" width="72" height="20" uuid="65e27fde-85c7-4dca-8d95-a935bf9ce162"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tele No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="487" y="0" width="72" height="20" uuid="595c55a9-f395-4631-8819-ae12d42873d7"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Arival Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="569" y="0" width="72" height="20" uuid="ffcb3104-bee9-4d42-ba3c-48412c9adeb9"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Due Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="648" y="0" width="72" height="20" uuid="3135b82b-6123-457a-9fd9-8a6922ebad43"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Country]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="731" y="0" width="71" height="20" uuid="ce74f204-ea62-4e5a-ba93-38fb20459a4e"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Room No]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="33" height="20" uuid="ba7b7983-cb52-420f-99c7-b94cd59b10f9"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{booking_cus_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="47" y="0" width="127" height="20" uuid="bfb41519-919b-48c9-b5d6-8d6d3c44a9f7"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{booking_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="0" width="72" height="20" uuid="258bd47f-df14-4621-8cde-a41568409782"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{booking_nic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="256" y="0" width="42" height="20" uuid="9817e6af-508a-4016-a712-af5fabbbac96"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{booking_gender}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="316" y="0" width="72" height="20" uuid="4f3cbd37-6567-4738-80de-d3bfc8e9701f"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{booking_dob}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="401" y="0" width="72" height="20" uuid="654b2b2e-cf32-449c-be9a-e1a4400f0b64"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{booking_tele}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="487" y="0" width="72" height="20" uuid="57c6e8bb-e486-42f5-bfa2-666b696539f2"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{booking_come_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="569" y="0" width="72" height="20" uuid="1d72ceeb-677d-409f-b3b2-1cf4e5d73e43"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{booking_due_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="648" y="0" width="72" height="20" uuid="23f308a4-bc22-4049-8b0b-438497b9adab"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{booking_country}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="730" y="0" width="72" height="20" uuid="fc295f88-7e33-4b31-8bdf-c13402fbb4f4"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{booking_room_id}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="28" width="802" height="1" uuid="5b13a5d1-c92f-448f-8392-59e290105863"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="14" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="314" y="26" width="187" height="26" uuid="b8842df3-d363-409b-8082-b941f7ddbf1b"/>
+				<textElement>
+					<font fontName="Book Antiqua" size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Hot Line - 077 990 8148]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="273" y="0" width="247" height="26" uuid="91939fa4-b0f2-462b-8c24-2f4bca44c173"/>
+				<textElement>
+					<font fontName="Book Antiqua" size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Software by Debug Software Solutin]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="10" splitType="Stretch"/>
+	</summary>
+</jasperReport>

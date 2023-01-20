@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e0a46cf4-5237-4158-b879-bb2166316da2">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     food.`food_id` AS food_food_id,
+     food.`food_name` AS food_food_name,
+     food.`category` AS food_category,
+     food.`unit` AS food_unit,
+     food.`price` AS food_price,
+     food.`ingredients` AS food_ingredients
+FROM
+     `food` food]]>
+	</queryString>
+	<field name="food_food_id" class="java.lang.String"/>
+	<field name="food_food_name" class="java.lang.String"/>
+	<field name="food_category" class="java.lang.String"/>
+	<field name="food_unit" class="java.lang.String"/>
+	<field name="food_price" class="java.lang.Integer"/>
+	<field name="food_ingredients" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="142" splitType="Stretch">
+			<staticText>
+				<reportElement x="212" y="0" width="161" height="35" uuid="9cf5c014-17d7-4e59-a7c9-7190a8be20c5"/>
+				<textElement>
+					<font fontName="Arial Black" size="24" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Food Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="193" y="35" width="194" height="99" uuid="7ce07d42-5b4f-4d1b-970e-6c5dd311070a"/>
+				<imageExpression><![CDATA["E:\\Java Projects\\Hotel_Manager\\src\\foodBG.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="25" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="60" height="20" uuid="c9b6fb45-3bf9-42b4-a5a2-2011445e4fa6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Food ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="74" y="0" width="92" height="20" uuid="0d469663-ed9d-4076-b2af-b8bc5138bad3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Food Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="0" width="73" height="20" uuid="d2f2cbad-a0c6-43d6-a6ba-86f8ac7ce541"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Category]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="272" y="0" width="41" height="20" uuid="e2c2b3ef-dbf4-47a9-8d98-b2a260521512"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="0" width="92" height="20" uuid="82e9be08-a561-4906-a400-776a5bdbd1d3"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="0" width="111" height="20" uuid="5d27794b-09ea-4f10-a2ff-bdbf3a14c50d"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ingredience]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="33" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="60" height="20" uuid="14720018-6add-45c3-bdfd-279820f18dbb"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{food_food_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="74" y="0" width="92" height="20" uuid="fc5e304a-f759-401e-b2ef-5ab46f4f698a"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{food_food_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="184" y="0" width="73" height="20" uuid="e0517306-b0c4-4c3a-873b-e40de7f352ab"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{food_category}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="257" y="0" width="69" height="20" uuid="73144a72-cb9a-492d-9d78-3d41530ea810"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{food_unit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="338" y="0" width="92" height="20" uuid="100c0240-0c60-4107-9da2-19251fd2a8eb"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{food_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="441" y="0" width="111" height="20" uuid="a0ee5ffe-bd62-4135-9753-c335cf91fbe4"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{food_ingredients}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="2" y="26" width="550" height="1" uuid="dcb746ca-fe69-49bd-bb0f-7401935ece2b"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="10" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="63" splitType="Stretch">
+			<staticText>
+				<reportElement x="166" y="9" width="247" height="26" uuid="8d2200f5-a26a-4c65-9f2d-09deb888a3ae"/>
+				<textElement>
+					<font fontName="Book Antiqua" size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Software by Debug Software Solutin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="35" width="187" height="26" uuid="6ec7c27f-d3e3-451d-96fa-485313ecfa5e"/>
+				<textElement>
+					<font fontName="Book Antiqua" size="14" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Hot Line - 077 990 8148]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="26" splitType="Stretch"/>
+	</summary>
+</jasperReport>
